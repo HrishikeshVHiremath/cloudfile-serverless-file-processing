@@ -71,6 +71,20 @@ flowchart TD
 
 AWS, Python, HTML, CSS, JavaScript, Amazon S3, AWS Lambda, DynamoDB, API Gateway, CloudWatch, SNS and IAM.
 
+## Project Screenshots
+
+### Complete Overview
+![Complete-View](screenshots2/Complete-View.png)
+
+### Dashboard View
+![Dashboard](screenshots2/Dashboard.png)
+
+### Successful View
+![Successful-Upload](screenshots2/Successful-Upload.png)
+
+### File Info
+![File-Details](screenshots2/File-Details.png)
+
 ## Project Status
 
 Completed core implementation and tested file uploads, metadata retrieval, input validation, and API authorization.
