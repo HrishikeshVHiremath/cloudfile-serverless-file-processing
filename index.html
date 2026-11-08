@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudFile | File Processing Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="brand-icon">☁</span>
+                <span>CloudFile</span>
+            </div>
+
+            <p class="menu-label">MENU</p>
+
+            <nav>
+                <a href="#" class="nav-link active">▦ Dashboard</a>
+                <a href="#upload" class="nav-link">↑ Upload Files</a>
+                <a href="#history" class="nav-link">◷ File History</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p>SERVERLESS STORAGE</p>
+                <span class="status-dot"></span>
+                AWS Connected
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Manage and process your files in the cloud.</p>
+                </div>
+                <div class="profile">CF</div>
+            </header>
+
+            <!-- Statistics -->
+            <section class="stats">
+                <div class="stat-card">
+                    <p>Total Files</p>
+                    <h2 id="totalFiles">--</h2>
+                    <span>Files processed</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>Total Words</p>
+                    <h2 id="totalWords">--</h2>
+                    <span>Words analysed</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>Storage Status</p>
+                    <h2 class="cyan-text">Active</h2>
+                    <span>Cloud storage</span>
+                </div>
+            </section>
+
+            <!-- API Authorization -->
+            <div class="panel auth-panel">
+                <h2>API Authorization</h2>
+
+                <input
+                    type="password"
+                    id="apiToken"
+                    placeholder="Enter your CloudFile access token"
+                >
+
+                <button id="saveToken">Connect</button>
+
+                <p id="authStatus">Not connected</p>
+            </div>
+
+            <!-- Upload Section -->
+            <section class="content-grid">
+
+                <div class="panel upload-panel" id="upload">
+                    <h2>Upload Your File</h2>
+                    <p class="section-description">
+                        Upload a text file to process it using AWS serverless services.
+                    </p>
+
+                    <div class="drop-zone" id="dropZone">
+                        <div class="upload-icon">↑</div>
+                        <h3>Drag and drop your file here</h3>
+                        <p>or choose a file from your device</p>
+
+                        <input type="file" id="fileInput" accept=".txt">
+                        <label for="fileInput" class="browse-button">
+                            Browse Files
+                        </label>
+
+                        <p class="file-note">TXT files only · Maximum size 100 KB</p>
+                    </div>
+
+                    <p id="selectedFile">No file selected</p>
+                    <button id="uploadButton" class="process-button">
+                        Process File
+                    </button>
+
+                    <div id="result"></div>
+                </div>
+                <!-- File Details Panel -->
+                <div class="panel details-panel" id="fileDetails" hidden>
+                    <div class="details-header">
+                        <h2>File Details</h2>
+                        <button id="closeDetails" class="close-button">
+                            ×
+                        </button>
+                    </div>
+
+                    <div id="fileDetailsContent">
+                        <p>Select a file to view its details.</p>
+                    </div>
+                </div>
+                
+                <!-- Recent Files -->
+                <div class="panel history-panel" id="history">
+                    <h2>Recent Files</h2>
+                    <p class="section-description">
+                        Your recently processed files.
+                    </p>
+
+                    <div id="recentFiles">
+                        <p class="loading-text">Loading file history...</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
