@@ -85,6 +85,19 @@ AWS, Python, HTML, CSS, JavaScript, Amazon S3, AWS Lambda, DynamoDB, API Gateway
 ### File Details
 ![File Details](File-Details.png)
 
+## Testing and Validation
+
+The application was tested with the following scenarios:
+
+- Successful TXT file upload.
+- Empty file content validation.
+- Missing filename validation.
+- Invalid JSON request handling.
+- File size limit validation (100 KB).
+- Unsupported file type rejection.
+- API authorization with valid and invalid tokens.
+- Metadata retrieval and recent upload history.
+
 ## Project Status
 
 Completed core implementation and tested file uploads, metadata retrieval, input validation, and API authorization.
