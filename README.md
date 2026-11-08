@@ -37,6 +37,26 @@ The application uses AWS Lambda for processing, Amazon S3 for file storage, Amaz
 6. DynamoDB stores its metadata.
 7. The metadata API retrieves recent file records for the dashboard.
 
+```mermaid
+flowchart TD
+    A[User] --> B[CloudFile Web Dashboard]
+    B --> C[Amazon API Gateway]
+    C --> D[Lambda Authorizer]
+    D -->|Authorized| E[File Processing Lambda]
+    E -->|Store File| F[Amazon S3]
+    E -->|Save Metadata| G[Amazon DynamoDB]
+    B -->|Request File History| C
+    C --> H[Metadata Lambda]
+    H -->|Retrieve Metadata| G
+    F -->|Incoming Folder Event| E
+    E --> I[Amazon CloudWatch]
+    H --> I
+    I --> J[Amazon SNS Email Alerts]
+    K[ AWS IAM ] -.-> E
+    K -.-> H
+    K -.-> D
+```
+
 ## Security
 
 - S3 Block Public Access is enabled.
