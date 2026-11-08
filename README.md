@@ -73,17 +73,17 @@ AWS, Python, HTML, CSS, JavaScript, Amazon S3, AWS Lambda, DynamoDB, API Gateway
 
 ## Project Screenshots
 
-### Complete Dashboard
-![Complete View](Complete-View.png)
+### Complete Dashboard View
+![Complete Dashboard](Complete-View.png)
 
 ### Dashboard
-![Dashboard](screenshots2/Dashboard.png)
+![Dashboard](Dashboard.png)
+
+### Successful File Upload
+![Successful Upload](Successful-Upload.png)
 
 ### File Details
-![File Details](screenshots2/File-details.png)
-
-### Successful Upload
-![Successful Upload](screenshots2/Successful-Upload.png)
+![File Details](File-Details.png)
 
 ## Project Status
 
