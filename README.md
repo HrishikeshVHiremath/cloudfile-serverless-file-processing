@@ -43,16 +43,16 @@ flowchart TD
     B --> C[Amazon API Gateway]
     C --> D[Lambda Authorizer]
     D -->|Authorized| E[File Processing Lambda]
-    E -->|Store File| F[Amazon S3]
-    E -->|Save Metadata| G[Amazon DynamoDB]
-    B -->|Request File History| C
+    E --> F[Amazon S3]
+    E --> G[Amazon DynamoDB]
+    B -->|Request History| C
     C --> H[Metadata Lambda]
-    H -->|Retrieve Metadata| G
+    H --> G
     F -->|Incoming Folder Event| E
     E --> I[Amazon CloudWatch]
     H --> I
     I --> J[Amazon SNS Email Alerts]
-    K[ AWS IAM ] -.-> E
+    K[AWS IAM] -.-> E
     K -.-> H
     K -.-> D
 ```
