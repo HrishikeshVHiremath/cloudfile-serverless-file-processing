@@ -74,7 +74,7 @@ AWS, Python, HTML, CSS, JavaScript, Amazon S3, AWS Lambda, DynamoDB, API Gateway
 ## Project Screenshots
 
 ### Complete Dashboard
-![Complete View](screenshots2/Complete-View.png)
+![Complete View](Complete-View.png)
 
 ### Dashboard
 ![Dashboard](screenshots2/Dashboard.png)
